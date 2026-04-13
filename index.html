@@ -51,7 +51,6 @@ border: 1px solid #ccc;
 transition: 0.3s;
 }
 
-/* ✨ EFEITO DE FOCO */
 input:focus {
 outline: none;
 border: 1px solid #2563EB;
@@ -86,7 +85,7 @@ font-size: 12px;
 color: #9CA3AF;
 }
 
-/* 📱 RESPONSIVO PARA CELULAR */
+/* 📱 RESPONSIVO */
 @media (max-width: 480px) {
   .container {
     padding: 25px;
@@ -137,9 +136,9 @@ Controle e Cadastro de Presenças
 
 <p>Acesso restrito</p>
 
-<input type="password" id="senha" placeholder="Digite a senha">
+<input type="password" id="senha" placeholder="Digite a senha" onkeypress="if(event.key==='Enter') verificar()">
 
-<button>Entrar</button>
+<button onclick="verificar()">Entrar</button>
 
 <div class="footer">
 Uso interno • Não compartilhar
@@ -148,17 +147,18 @@ Uso interno • Não compartilhar
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+function verificar() {
+  var senha = document.getElementById("senha").value.trim();
 
-  function verificar() {
-    var senha = document.getElementById("senha").value.trim();
-
-    if (senha === "1234") {
-      window.location.href = "https://jovisa-jam-stats.lovable.app";
-    } else {
-      alert("Senha incorreta!");
-    }
+  if (senha === "1234") {
+    window.location.href = "https://jovisa-jam-stats.lovable.app";
+  } else {
+    alert("Senha incorreta!");
   }
+}
+</script>
 
-  document.querySelector("button
+</body>
+</html>
+
 
