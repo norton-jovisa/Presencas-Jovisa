@@ -105,7 +105,8 @@ Controle e Cadastro de Presenças
 
 <p>Acesso restrito</p>
 
-<input type="password" id="senha" placeholder="Digite a senha">
+<input type="password" id="senha" placeholder="Digite a senha" onkeypress="if(event.key==='Enter') verificar()">
+
 
 <button onclick="verificar()">Entrar</button>
 
