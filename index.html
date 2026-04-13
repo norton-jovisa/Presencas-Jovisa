@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align:center; margin-top:100px; font-family:Arial;">
+
+<h2>Acesso ao Dashboard</h2>
+
+<input type="password" id="senha" placeholder="Senha">
+<button onclick="verificar()">Entrar</button>
+
+<script>
+function verificar() {
+  var senha = document.getElementById("senha").value;
+
+  if (senha === "1234") {
+    window.location.href = "https://seu-projeto.lovable.app";
+  } else {
+    alert("Senha incorreta!");
+  }
+}
+</script>
+
+</body>
+</html>
