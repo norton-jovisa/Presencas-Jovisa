@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title></title>
 
@@ -22,7 +23,8 @@ padding: 40px;
 border-radius: 15px;
 box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 text-align: center;
-width: 320px;
+width: 90%;
+max-width: 350px;
 }
 
 .logo {
@@ -83,6 +85,25 @@ margin-top: 15px;
 font-size: 12px;
 color: #9CA3AF;
 }
+
+/* 📱 RESPONSIVO PARA CELULAR */
+@media (max-width: 480px) {
+  .container {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 13px;
+  }
+
+  input, button {
+    font-size: 16px;
+  }
+}
 </style>
 </head>
 
@@ -139,18 +160,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  // clique no botão
-  document.querySelector("button").addEventListener("click", verificar);
+  document.querySelector("button
 
-  // tecla ENTER
-  document.getElementById("senha").addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-      verificar();
-    }
-  });
-
-});
-</script>
-
-</body>
-</html>
