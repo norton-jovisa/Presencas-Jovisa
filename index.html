@@ -116,10 +116,9 @@ Controle e Cadastro de Presenças
 
 <p>Acesso restrito</p>
 
-<input type="password" id="senha" placeholder="Digite a senha" onkeypress="if(event.key==='Enter') verificar()">
+<input type="password" id="senha" placeholder="Digite a senha">
 
-
-<button onclick="verificar()">Entrar</button>
+<button>Entrar</button>
 
 <div class="footer">
 Uso interno • Não compartilhar
@@ -128,14 +127,30 @@ Uso interno • Não compartilhar
 </div>
 
 <script>
-function verificar() {
-  var senha = document.getElementById("senha").value.trim();
+document.addEventListener("DOMContentLoaded", function() {
 
-  if (senha === "1234") {
-    window.location.href = "https://jovisa-jam-stats.lovable.app";
-  } else {
-    alert("Senha incorreta!");
+  function verificar() {
+    var senha = document.getElementById("senha").value.trim();
+
+    if (senha === "1234") {
+      window.location.href = "https://jovisa-jam-stats.lovable.app";
+    } else {
+      alert("Senha incorreta!");
+    }
   }
-}
-</scrip
 
+  // clique no botão
+  document.querySelector("button").addEventListener("click", verificar);
+
+  // tecla ENTER
+  document.getElementById("senha").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      verificar();
+    }
+  });
+
+});
+</script>
+
+</body>
+</html>
