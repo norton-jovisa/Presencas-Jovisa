@@ -46,6 +46,14 @@ padding: 12px;
 margin-top: 15px;
 border-radius: 8px;
 border: 1px solid #ccc;
+transition: 0.3s;
+}
+
+/* ✨ EFEITO DE FOCO */
+input:focus {
+outline: none;
+border: 1px solid #2563EB;
+box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
 }
 
 button {
@@ -65,12 +73,10 @@ input, button {
 box-sizing: border-box;
 }
 
-
 button:hover {
 background: #1E40AF;
 transform: scale(1.03);
 }
-
 
 .footer {
 margin-top: 15px;
@@ -112,7 +118,6 @@ Controle e Cadastro de Presenças
 
 <input type="password" id="senha" placeholder="Digite a senha" onkeypress="if(event.key==='Enter') verificar()">
 
-
 <button onclick="verificar()">Entrar</button>
 
 <div class="footer">
@@ -131,8 +136,5 @@ function verificar() {
     alert("Senha incorreta!");
   }
 }
-</script>
-
-</body>
-</html>
+</scrip
 
